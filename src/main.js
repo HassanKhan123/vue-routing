@@ -30,7 +30,8 @@ const router = createRouter({
           component: TeamMembers,
           props: true
         }
-      ]
+      ],
+      meta: { needsAuth: true }
       // alias: '/'
     },
     {
