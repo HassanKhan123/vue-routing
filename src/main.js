@@ -39,6 +39,11 @@ const router = createRouter({
         default: UsersList,
         footer: UsersFooter
       }
+      // beforeEnter(to, from, next) {
+      //   console.log('users before');
+      //   console.log(to, from);
+      //   next();
+      // }
     },
 
     {
@@ -66,6 +71,10 @@ router.beforeEach((to, from, next) => {
   //   next({ name: 'team-members', params: { teamId: 't2' } });
   // }
   next();
+});
+
+router.afterEach((to, from) => {
+  console.log(to, from);
 });
 
 const app = createApp(App);
